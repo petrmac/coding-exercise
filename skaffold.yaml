@@ -1,0 +1,18 @@
+apiVersion: skaffold/v2beta27
+kind: Config
+metadata:
+  name: exercise
+build:
+  artifacts:
+  - image: exercise
+    context: .
+    jib:
+      type: gradle
+  - image: postgres-awaiter
+    context: .
+    docker:
+      dockerfile: postgresAwaiter.Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - ./kubernetes-manifests/*.yaml
