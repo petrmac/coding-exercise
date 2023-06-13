@@ -3,11 +3,11 @@
 This is a coding exercise project. 
 The goal is to demonstrate applicants understanding of the current code and ability to improve it.
 
-The example application provides the weather forecast for given `latitude` and `longitude`.
+The example REST application provides the weather forecast for given `latitude` and `longitude`.
 Current implementation uses weather API at https://open-meteo.com/. You can see the API description on the page.
 
-The application is unfinished, there are some errors and some tests are wrong.
-There is a simple endpoint serving the hourly forecast in a map indexed by time. 
+The example Spring Boot application is unfinished, there are some errors and some tests are wrong.
+There is a simple endpoint serving the hourly forecast. 
 The expected output looks as follows:
 ```shell
 
