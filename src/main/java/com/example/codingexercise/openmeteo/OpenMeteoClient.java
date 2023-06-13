@@ -34,7 +34,7 @@ public class OpenMeteoClient implements MeteoClient {
                         .queryParam("latitude", latitude)
                         .queryParam("longitude", longitude)
                         .queryParam("current_weather", false)
-                        .queryParam("hourly", "temperature_2m", "relativehumidity_2m")
+                        .queryParam("hourly", "temperature_2m")
                         .build())
                 .retrieve()
                 .bodyToMono(ForecastResponseDto.class);
