@@ -8,9 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
-import java.time.LocalDateTime;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.List;
 import java.util.stream.IntStream;
 
 @Service
@@ -27,7 +25,7 @@ public class OpenMeteoClient implements MeteoClient {
     }
 
     @Override
-    public Mono<Map<LocalDateTime, WeatherForecast>> getForecast(double latitude, double longitude) {
+    public Mono<List<WeatherForecast>> getForecast(double latitude, double longitude) {
         final Mono<ForecastResponseDto> response = webClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path("/v1/forecast")
@@ -43,7 +41,8 @@ public class OpenMeteoClient implements MeteoClient {
 
     }
 
-    private Map<LocalDateTime, WeatherForecast> mapForecast(ForecastResponseDto forecast) {
+    private List<WeatherForecast> mapForecast(ForecastResponseDto forecast) {
+
         //TODO: implement me
         return null;
     }

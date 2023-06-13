@@ -1,7 +1,6 @@
 package com.example.codingexercise;
 
-import java.time.LocalDateTime;
-import java.util.Map;
+import java.util.List;
 
-public record WeatherForecastResponse(double latitude, double longitude, Map<LocalDateTime, WeatherForecast> forecast) {
+public record WeatherForecastResponse(double latitude, double longitude, List<WeatherForecast> forecast) {
 }

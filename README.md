@@ -23,22 +23,26 @@ Connection: keep-alive
 {
   "latitude": 51.1,
   "longitude": 14.1,
-  "forecast": {
-    "2023-06-16T10:00": {
-      "time": "2023-06-16T10:00:00",
-      "forecastedTemperature": 32.29999923706055
+  "forecast": [
+    {
+      "time": "2023-06-13T00:00:00",
+      "forecastedTemperature": 16.100000381469727
     },
-    "2023-06-17T10:00": {
-      "time": "2023-06-17T10:00:00",
-      "forecastedTemperature": 29.299999237060547
+    {
+      "time": "2023-06-13T01:00:00",
+      "forecastedTemperature": 15.800000190734863
     },
-    "2023-06-18T10:00": {
-      "time": "2023-06-18T10:00:00",
-      "forecastedTemperature": 29.399999618530273
+    {
+      "time": "2023-06-13T02:00:00",
+      "forecastedTemperature": 16.100000381469727
     },
-    
+    {
+      "time": "2023-06-13T03:00:00",
+      "forecastedTemperature": 17.399999618530273
+    },
     ...
-  }
+    ]
+}
 
 ```
 
@@ -48,26 +52,34 @@ Connection: keep-alive
 - Add a `relative humidity` measure to the result
 - What is wrong with the `OpenMeteoClientSpec`?
 - What is wrong with the `WeatherController`?
-- (optional, if time allows) Implement simple semaphore based on the current weather temperature (< 20: green, < 30: orange, > 40: red) and controller method for it
+- Implement simple semaphore based on the current weather temperature (< 20: green, < 30: orange, > 40: red) and controller method for it
 
 ## Acceptance criteria
-- The project should compile, all tests should pass and coverage should be > 95%
+- The project should compile, build must pass (`./gradlew clean build`), all tests should pass and coverage should be > 95%
 - Each hourly forecast should have `relativeHumidity` information
 ```json
 {
   "latitude": 51.1,
   "longitude": 14.1,
-  "forecast": {
-    "2023-06-16T10:00": {
-      "time": "2023-06-16T10:00:00",
-      "forecastedTemperature": 32.29999923706055,
-      "relativeHumidity": 50
-    }
+  "forecast": [
+    {
+      "time": "2023-06-13T00:00:00",
+      "forecastedTemperature": 16.100000381469727,
+      "relativeHumidity": 40
+    },
     //... shortened
-  }
+  ]
 }
 ```
-- Add endpoint `/weather/semaphore` showing the colours based on current weather. 
+- There should ba added a new endpoint `/weather/semaphore` showing the colours based on current weather.
+Expected response e.g.:
+```json
+{
+  "latitude": 51.1,
+  "longitude": 14.1,
+  "semaphore": "GREEN"
+}
+```
 
 ## Prerequisites
 - have Java JDK 17 available on the computer

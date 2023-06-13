@@ -2,9 +2,8 @@ package com.example.codingexercise;
 
 import reactor.core.publisher.Mono;
 
-import java.time.LocalDateTime;
-import java.util.Map;
+import java.util.List;
 
 public interface MeteoClient {
-    Mono<Map<LocalDateTime, WeatherForecast>> getForecast(double latitude, double longitude);
+    Mono<List<WeatherForecast>> getForecast(double latitude, double longitude);
 }
