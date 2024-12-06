@@ -45,10 +45,20 @@ Connection: keep-alive
 }
 
 ```
+## How to build locally
+```shell
+./gradlew clean build
+```
+
+## How to run locally
+```shell
+./gradlew bootRun
+```
 
 
 ## Assignments:
 - Implement missing code, fix coding error and test
+- Improve coverage to fulfill 80% coverage (uncomment gradle build check for coverage`dependsOn(tasks.jacocoTestCoverageVerification)`)
 - Add a `relative humidity` measure to the result
 - What is wrong with the `OpenMeteoClientSpec`?
 - What is wrong with the `WeatherController`?
@@ -71,7 +81,7 @@ Connection: keep-alive
   ]
 }
 ```
-- There should ba added a new endpoint `/weather/semaphore` showing the colours based on current weather.
+- There should be added a new endpoint `/weather/semaphore` showing the colours based on current weather.
 Expected response e.g.:
 ```json
 {
