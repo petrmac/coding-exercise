@@ -7,7 +7,7 @@ plugins {
 	id("com.google.cloud.tools.jib") version "3.4.4"
 	id("org.shipkit.shipkit-changelog") version "2.0.1"
 	id("org.shipkit.shipkit-github-release") version "2.0.1"
-	id("org.shipkit.shipkit-auto-version") version "2.0.11"
+	id("org.shipkit.shipkit-auto-version") version "2.1.0"
 }
 
 group = "com.example"
