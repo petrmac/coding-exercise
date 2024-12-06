@@ -82,4 +82,4 @@ Expected response e.g.:
 ```
 
 ## Prerequisites
-- have Java JDK 17 available on the computer
+- have Java JDK 21 available on the computer
