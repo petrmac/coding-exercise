@@ -58,7 +58,7 @@ Connection: keep-alive
 
 ## Assignments:
 - Implement missing code, fix coding error and test
-- Improve coverage to fulfill 80% coverage (uncomment gradle build check for coverage`dependsOn(tasks.jacocoTestCoverageVerification)`)
+- Improve coverage to fulfill 95% coverage
 - Add a `relative humidity` measure to the result
 - What is wrong with the `OpenMeteoClientSpec`?
 - What is wrong with the `WeatherController`?

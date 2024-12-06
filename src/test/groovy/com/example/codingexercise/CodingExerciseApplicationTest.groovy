@@ -23,4 +23,9 @@ class CodingExerciseApplicationTest extends Specification {
         expect: "the WeatherController is created"
         weatherController
     }
+
+    def "main app starts"() {
+        expect:
+        CodingExerciseApplication.main([] as String)
+    }
 }
