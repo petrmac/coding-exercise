@@ -93,3 +93,26 @@ Expected response e.g.:
 
 ## Prerequisites
 - have Java JDK 21 available on the computer
+
+## Run build in docker
+For example in webhippie (running out of box)
+
+```bash
+docker run -it webhippie/temurin:21
+
+java --version
+
+apt-get update
+
+apt-get install git
+
+git clone https://github.com/petrmac/coding-exercise.git
+
+cd coding-exercise
+
+./gradlew clean build
+```
+
+
+
+
